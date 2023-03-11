@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+typedef struct circle
+ {
+ 	float x;
+ 	float y;
+ 	float r;
+ }circle;;
+typedef struct point
+ {
+ 	float x;
+ 	float y;
+ }point;;
+
+int main()
+{
+	circle c[3];
+	point p;
+	int i;
+	float d;
+	for(i = 0;i < 3;i++)
+	{
+		printf("please enter the value of the x for the circle nbr %d :",i+1);
+		scanf("%f",&c[i].x);
+		printf("please enter the value of the y for the circle nbr %d :",i+1);
+		scanf("%f",&c[i].y);
+		printf("please enter the value of the r for the circle nbr %d :",i+1);
+		scanf("%f",&c[i].r);
+	}
+	printf("please enter the value of x for the point :");
+	scanf("%f",&p.x);
+	printf("please enter the value of y for the point :");
+	scanf("%f",&p.y);
+	for(i = 0;i < 3;i++)
+	{
+		d = sqrt(pow((c[i].x - p.x), 2) + pow((c[i].y - p.y), 2));
+		if(d <= c[i].r)
+		{
+			printf("\np apartient a la circle %d",i+1);
+		}else
+		{
+			printf("\np n'appartient pas a la circle %d",i+1);
+		}
+	}
+	return 0;
+}
