@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+typedef struct point
+ {
+ 	float x;
+ 	float y;
+ }point;;
+ int main()
+ {
+ 	point p1,p2,p0;
+ 	float p1p2;
+ 	printf("Enter x and y for p1 :");
+ 	scanf("%f%f",&p1.x,&p1.y);
+ 	printf("Enter x and y for p2 :");
+ 	scanf("%f%f",&p2.x,&p2.y);
+ 	p1p2 = sqrt(pow((p2.x - p1.x), 2) + pow((p2.y - p1.y), 2));
+ 	printf("p1p2 = %f",p1p2);
+ 	p0.x = (p2.x + p1.x) / 2;
+ 	p0.y = (p2.y + p1.y) / 2;
+ 	printf("\n%f\n%f",p0.x,p0.y);
+ 	return 0;
+ }
